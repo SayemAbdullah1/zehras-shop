@@ -1,10 +1,13 @@
+import { Store } from '@/utilities/store';
 import Head from 'next/head'
 import Link from 'next/link'
-import React from 'react'
+import React, { useContext } from 'react'
 import Footer from './Footer';
 import Header from './Header';
 
 function Layout({ children, title }) {
+
+ 
     return (
         <>
             <Head>
