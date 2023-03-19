@@ -5,8 +5,9 @@ import { XCircleIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 import React, { useContext } from 'react'
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 
-export default function CartScreen() {
+function CartScreen() {
     const router = useRouter();
     const {state, dispatch} = useContext(Store)
     const {
@@ -34,7 +35,7 @@ export default function CartScreen() {
             ) :
             (
                 <div className='grid md:grid-cols-4 md:gap-5'>
-                    <div className='overflow-x-auto md:col-span-3'>
+                    <div className='overflow-x-auto md:col-span-3 shadow-md'>
                         <table className='min-w-full'>
                             <thead className='border-b'>
                                 <tr>
@@ -44,7 +45,7 @@ export default function CartScreen() {
                                     <th className='p-5'>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody className='shadow-md'>
                                 {
                                     cartItems.map((item)=>(
                                         <tr key={item.slug} className=''>
@@ -100,3 +101,4 @@ export default function CartScreen() {
     </Layout>
   )
 }
+export default dynamic(()=> Promise.resolve(CartScreen), {ssr:false})
