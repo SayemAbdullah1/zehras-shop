@@ -4,8 +4,8 @@ import { createContext, useReducer } from "react";
 
 export const Store = createContext();
 const initialState = {
-    cart: Cookies.get('cart') ? JSON.parse(Cookies.get('cart')) :
-        { cartItems: [], shippingAddress: {}}
+    cart: Cookies.get('cart') ? JSON.parse(Cookies.get('cart')) 
+        : { cartItems: [], shippingAddress: {}, paymentMethod: '' },
 }
 
 function reducer(state, action) {
@@ -42,10 +42,20 @@ function reducer(state, action) {
             return {
                 ...state,
                 cart: {
+                    ...state.cart,
                     shippingAddress:{
                         ...state.cart.shippingAddress,
                         ...action.payload,
                     }
+                }
+            }
+        case 'SAVE_PAYMENT_METHOD':
+            return {
+                ...state,
+                cart: {
+                    ...state.cart,
+                    paymentMethod: action.payload,
+                    
                 }
             }
 

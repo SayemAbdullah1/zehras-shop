@@ -47,7 +47,7 @@ export default function ShippingScreen() {
                 }
             })
         )
-        router.push('/payment')
+        router.push('/payments')
     }
   return (
     <div>
