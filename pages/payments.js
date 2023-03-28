@@ -73,3 +73,4 @@ export default function payments() {
         </Layout>
     )
 }
+payments.auth = true;

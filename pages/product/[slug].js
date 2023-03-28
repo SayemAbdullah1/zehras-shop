@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext } from "react";
+import { toast } from "react-toastify";
 
 
 export default function ProductScreen(props) {
@@ -27,8 +28,7 @@ export default function ProductScreen(props) {
         const {data} = await axios.get(`/api/products/${product._id}`);
 
         if(data.countInStock < quantity){
-            alert('Sorry! product is not in stock')
-            return 
+            return toast.error('Sorry, product is out of stock.')
         }
 
         dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity }});
@@ -70,7 +70,7 @@ export default function ProductScreen(props) {
                             </div>
                         <div className=" mb-2 flex justify-between">
                             <div>Status</div>
-                            <div>{product.countInStock > 0 ? 'In stock': 'Unavalable'}</div>
+                            <div>{product.countInStock > 0 ? 'In stock': 'Unavailable'}</div>
                         </div>
                         <button className="primary-button w-full" onClick={handleAddToCart}>Add to cart</button>
                         </div>
