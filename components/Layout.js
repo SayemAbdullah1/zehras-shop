@@ -70,7 +70,7 @@ function Layout({ children, title }) {
                                                     </DropdownLink>
                                                 </Menu.Item>
                                                 <Menu.Item>
-                                                    <DropdownLink className='dropdown-link' href='/order'>
+                                                    <DropdownLink className='dropdown-link' href='/order-history'>
                                                         Order History
                                                     </DropdownLink>
                                                 </Menu.Item>
