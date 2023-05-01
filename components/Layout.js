@@ -1,4 +1,4 @@
-import { Store } from '@/utilities/store';
+
 import Head from 'next/head'
 import Link from 'next/link'
 import React, { useContext, useEffect, useState } from 'react'
@@ -10,6 +10,9 @@ import { signOut, useSession } from 'next-auth/react';
 import { Menu } from '@headlessui/react';
 import DropdownLink from './DropdownLink';
 import Cookies from 'js-cookie';
+import { Store } from '@/utilities/Storage';
+import Slider from './Home/Slider';
+
 
 
 function Layout({ children, title }) {
@@ -89,6 +92,7 @@ function Layout({ children, title }) {
                         </div>
                     </nav>
                 </header>
+                {/* <Slider></Slider> */}
 
                 <main className='container m-auto mt-4 px-4'>
                     {children}

@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import { Store } from '@/utilities/store'
+import { Store } from '@/utilities/Storage'
 import Image from 'next/image';
 import { XCircleIcon } from '@heroicons/react/outline';
 import Link from 'next/link';

@@ -1,7 +1,7 @@
 import CheckoutWizard from '@/components/checkoutWizard'
 import Layout from '@/components/Layout'
 import { getError } from '@/utilities/error'
-import { Store } from '@/utilities/store'
+import { Store } from '@/utilities/Storage'
 import axios from 'axios'
 import Cookies from 'js-cookie'
 import Image from 'next/image'
@@ -80,14 +80,14 @@ export default function PlaceOrderScreen() {
                                 {shippingAddress.city}, {shippingAddress.postalCode},{' '}
                                 {shippingAddress.country}
                             </div>
-                            <div>
+                            <div className='text-blue-700'>
                                 <Link href="/shipping">Edit</Link>
                             </div>
                         </div>
                         <div className="card  p-5">
                             <h2 className="mb-2 text-lg">Payment Method</h2>
                             <div>{paymentMethod}</div>
-                            <div>
+                                <div className='text-blue-700'>
                                 <Link href="/payments">Edit</Link>
                             </div>
                         </div>
@@ -128,7 +128,7 @@ export default function PlaceOrderScreen() {
                                     ))}
                                 </tbody>
                             </table>
-                            <div>
+                                <div className='text-blue-700'>
                                 <Link href="/cart">Edit</Link>
                             </div>
                         </div>

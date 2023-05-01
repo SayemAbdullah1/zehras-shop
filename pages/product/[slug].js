@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import Product from "@/models/Products";
 import data from "@/utilities/data";
 import db from "@/utilities/db";
-import { Store } from "@/utilities/store";
+import { Store } from "@/utilities/Storage";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";

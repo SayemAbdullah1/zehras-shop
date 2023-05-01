@@ -9,8 +9,8 @@ import Product from '@/models/Products'
 import db from '@/utilities/db'
 import axios from 'axios'
 import { useContext } from 'react'
-import { Store } from '@/utilities/store'
 import { toast } from 'react-toastify'
+import { Store } from '@/utilities/Storage'
 
 const inter = Inter({ subsets: ['latin'] })
 

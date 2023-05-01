@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import { StoreProvider } from '@/utilities/store'
+import { StoreProvider } from '@/utilities/Storage'
 import { SessionProvider, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 

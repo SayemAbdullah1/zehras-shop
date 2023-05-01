@@ -1,6 +1,6 @@
 import CheckoutWizard from '@/components/checkoutWizard'
 import Layout from '@/components/Layout'
-import { Store } from '@/utilities/store'
+import { Store } from '@/utilities/Storage'
 import Cookies from 'js-cookie'
 import { useRouter } from 'next/router'
 import React, { useContext, useEffect } from 'react'

@@ -71,7 +71,7 @@ export default function Login() {
             </div>
             <div className='mb-4'>
     Don&apos;t have an account? &nbsp;
-    <Link href='register' className='text-blue-600'>Register</Link>
+                  <Link className='text-blue-600' href={`/register?redirect=${redirect || '/'}`}>Register</Link>
             </div>
         </form>
     </Layout>
